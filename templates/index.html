@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einspector</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            position: sticky;
+            z-index: 9999;
+            top: 0px;
+            cursor: pointer;
+            background-color: white;
+            opacity: none;
+        }
+
+        .logo {
+            display: inline;
+            position: relative;
+            align-items: initial;
+            /* filter: invert(100%); */
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border: 2px solid white;
+            border-radius: 150px;
+        }
+
+        .nav-list {
+            display: flex;
+            width: 50%;
+            /* background-color: black; */
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+        }
+
+        .nav-list li a {
+            display: inline;
+            position: relative;
+            left: 932px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .nav-list li a:hover {
+            color: blue;
+            /* padding: 10px; */
+            margin: 5px 2px;
+        }
+
+        .nav-list li a.active {
+            color: blue;
+            padding: 10px;
+            margin: 5px 2px;
+            text-decoration: underline;
+        }
+
+        .background {
+            background: rgb(0, 0, 0, 0.7) url('/static/img/background2.webp') no-repeat;
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .firstSection {
+            height: 100vh;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 50%;
+            margin: auto;
+            height: 75%;
+        }
+
+        .firstHalf {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-big {
+            font-size: 38px;
+        }
+
+        .text-small {
+            font-size: 18px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            margin: 7px 3px;
+            border: 2px solid blue;
+            color: white;
+            background: blue;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn1 {
+            padding: 8px 20px;
+            margin: 7px 3px;
+            border: 2px solid white;
+            color: black;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            padding: 8px 20px;
+            margin: 7px 3px;
+            border: 2px solid blue;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            background: rgb(4, 4, 248);
+        }
+
+        #about {
+            background-color: #f2f2f2;
+            height: 511px;
+        }
+
+        #aboutnews {
+            background-color: #f2f2f2;
+            height: 2292px;
+        }
+
+        #aboutnews p {
+            display: inline-block;
+            position: relative;
+            top: 700px;
+        }
+
+        #aboutnews div.parasnews {
+            display: inline-block;
+            position: relative;
+            top: 900px;
+            padding: 0px 65px;
+        }
+
+        #aboutnews .news {
+            display: inline-block;
+            position: relative;
+            top: -82px;
+            ;
+        }
+
+        .secRight {
+            display: flex;
+            height: 500px;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: 80%;
+            margin: auto;
+            /* font-family: 'Ubuntu', sans-serif; */
+        }
+
+        .paras {
+            padding: 0px 65px;
+        }
+
+        .secLeft {
+            display: flex;
+            height: 500px;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: 80%;
+            margin: auto;
+            flex-direction: row-reverse;
+            /* font-family: 'Ubuntu', sans-serif; */
+        }
+
+        #contact {
+            background-color: #f2f2f2;
+            height: 560px;
+        }
+
+        #contact p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #contact .text {
+            display: inline;
+            position: relative;
+            left: 600px;
+            width: 350px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid white;
+            background-color: wheat;
+            padding: 10px 20px;
+        }
+
+        #contact .label {
+            display: inline;
+            position: relative;
+            left: 605px;
+        }
+
+        #contact .btn-label {
+            display: inline;
+            position: relative;
+            left: 730px;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo.jpg" alt="" srcset=""><span style="font-size: 18px; color: blue;display: inline;position: relative;top: -14px;">Einspector</span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#aboutnews">News</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="background firstSection" id="home">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">Welcome to Einspector</p>
+                <p class="text-small">An pan India Online FIR Registration Portal</p>
+                <div class="buttons">
+                    <a href="Fir"><button class="btn">Register FIR</button></a>
+                    <a href="Status"><button class="btn1">FIR Status</button></a>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        <df-messenger intent="WELCOME" chat-title="E-Inspector" agent-id="81b84a7f-18df-4ef5-ace9-16d324f529f0"
+            language-code="en"></df-messenger>
+    </section>
+    <br>
+    <section id="about">
+        <section class="secRight">
+            <div class="paras">
+                <p class="sectionTag text-big" style="color: blue;">Who Are We?</p>
+                <p class="sectionsubTag text-small">Welcome to Einspector. This is a pan India Online Registration
+                    Portal.With the help of this website you can register an fir or complaint from any part of India.
+                </p>
+            </div>
+            <div class="thumbnail">
+                <img src="/static/img/Thumbnail.jpg" alt="thumbnail" class="imgFluid"
+                    style="height: 250px; width:250px; border-radius: 150px;">
+            </div>
+        </section>
+    </section>
+    <br>
+    <section id="aboutnews">
+        <section class="secRight">
+            <div class="parasnews">
+                <p class="text-big news" style="color: blue;">Current Headlines</p>
+                <p class="text-small">
+                    {% for new, des in mylist %}
+                <h1>news:</h1> {{ new }}
+                {{ value|linebreaks }}
+
+                <h4>description:</h4>{{ des }}
+                {{ value|linebreaks}}
+                {{linebreaks}}
+                {{linebreaks}}
+
+                {% endfor %}
+                </p>
+            </div>
+            <div class="thumbnail">
+                <img src="/static/img/Thumbnail2.jpg" alt="thumbnail" class="imgFluid"
+                    style="height: 250px; width:250px; border-radius: 150px;">
+            </div>
+        </section>
+    </section>
+    <br>
+    <section id="contact">
+        <p class="sectionTag text-big" style="color: blue;">Contact</p><br>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="name" class="label">Name:</label><br><br>
+            <input type="text" name="name" id="" class="text"><br><br>
+            <label for="email" class="label">Email:</label><br><br>
+            <input type="text" name="email" id="" class="text"><br><br>
+            <label for="phoneno" class="label">Phone No:</label><br><br>
+            <input type="text" name="phoneno" id="" class="text"><br><br>
+            <label for="Report" class="label">Report:</label><br><br>
+            <textarea name="Report" class="text" id="" cols="30" rows="40"></textarea><br><br>
+            <button type="submit" class="btn btn-label">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

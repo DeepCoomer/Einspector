@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fir</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        .message {
+            display: inline-block;
+            position: relative;
+            background-color: lightblue;
+            opacity: 0.5;
+            width: 1499px;
+            padding: 8px 10px;
+            top: 12px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    {% load widget_tweaks %}
+    <div>
+        <h3 class="container alert alert-danger text-center"
+            style="background-color: rgb(10, 0, 19); color: burlywood;">
+            Register FIR
+        </h3>
+    </div>
+    <div class="form-group">
+        <form method="post" enctype="multipart/form-data" class="row g-3 m-0"
+            style="background-color:  lightgray; padding: 65px;">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Name:</label>
+                {% render_field form.Name class="form-control" placeholder="Enter Your Name" type="name"  attr="required"%}
+                <!-- <input required type="name" class="form-control" id="inputEmail4" placeholder="Enter your Name" name="name"> -->
+            </div>
+             <div class="col-12">
+                <label for="inputAddress" class="form-label">Address:</label>
+                {% render_field form.Address class="form-control" placeholder="Enter Your Address" type="text"  attr="required"%}
+                {% comment %} <input required type="text" class="form-control" id="inputAddress" placeholder="Your Address"
+                    name="address"> {% endcomment %}
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City:</label>
+                {% render_field form.City class="form-control" type="text"  attr="required"%}
+                {% comment %} <input required type="text" class="form-control" id="inputCity" name="city"> {% endcomment %}
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">State:</label>
+                {% render_field form.State class="form-select" type="text"  attr="required"%}
+                {% comment %} <select id="inputState" class="form-select" name="state"> {% endcomment %}
+                    {% comment %} <option selected>Choose...</option> {% endcomment %}
+                    {% comment %} <option value="andhrapradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh ">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select> {% endcomment %}
+            </div>
+             <div class="col-md-2">
+                <label for="inputZip" class="form-label">Pincode:</label>
+                {% render_field form.Pincode class="form-control" type="text"  attr="required"%}
+                {% comment %} <input type="text" class="form-control" id="inputZip" name="pincode"> {% endcomment %}
+            </div>
+            <div class="col-md-6">
+                <label for="inputAddhar" class="form-label">Addhar Number:</label>
+                {% render_field form.Addhar class="form-control is-valid" type="text" placeholder="Enter Addhar Number Here"  attr="required"%}
+                {% comment %} <input required type="text" class="form-control is-valid" id="inputAddhar"
+                    placeholder="Enter Addhar Number here" name="addhar"> {% endcomment %}
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload Addhar card:</label>
+                {% render_field form.Img class="form-control" type="file" placeholder="Enter Addhar Number Here"  attr="required"%}
+                {% comment %} <input class="form-control" type="file" id="formFile" name='img'> {% endcomment %}
+            </div>
+            <div class="form-floating">
+                {% render_field form.Firdescription class="form-control" type="text" placeholder="Fir Description" id="floatingTextarea" attr="required"%}
+                {% comment %} <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                    name="firdescription"></textarea> {% endcomment %}
+                <label for="floatingTextarea">FIR Description:</label>
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">Date:</label>
+                {% render_field form.Date class="form-control" type="date"  attr="required"%}
+                {% comment %} <input type="text" class="form-control" id="inputZip" name="pincode"> {% endcomment %}
+            </div>
+             <div class="col-md-2">
+                <label for="inputZip" class="form-label">Time:</label>
+                {% render_field form.Time class="form-control" type="time"  attr="required"%}
+                {% comment %} <input type="text" class="form-control" id="inputZip" name="pincode"> {% endcomment %}
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Register FIR</button>
+            </div>
+            <br><br><br>
+        </form>
+    </div>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="{{message.tags}} message">
+        <strong style="color:black; font-weight: bolder;">{{message}}</strong>
+    </div>
+    {% endfor %}
+    {% endif %}
+</body>
+
+</html>
