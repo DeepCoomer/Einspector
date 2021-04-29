@@ -128,7 +128,7 @@ STATIC_URL = '/static/'
 #     '/var/www/static/',
 # ]
 
-STATIC_ROOT = BASE_DIR/ "static"
+STATIC_ROOT = BASE_DIR/ 'static'
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
