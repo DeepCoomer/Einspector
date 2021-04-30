@@ -235,13 +235,127 @@
         textarea {
             resize: none;
         }
+
+        @media only screen and (max-width:768px) {
+            .nav-list {
+                display: flex;
+                /* flex-direction: column; */
+                width: 50%;
+                align-items: center;
+            }
+
+            .nav-list li a {
+                display: inline;
+                position: relative;
+                left: -33px;
+                color: black;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .logo img {
+                height: 25px;
+                width: 25px;
+                border: 2px solid white;
+                border-radius: 140px;
+            }
+
+            span {
+                font-size: 12px;
+                color: blue;
+                display: inline;
+                position: relative;
+                top: -14px;
+            }
+
+            .firstSection {
+                height: 88vh;
+            }
+
+            .text-big {
+                font-size: 25px;
+            }
+
+            .text-small {
+                font-size: 12px;
+            }
+
+            .btn {
+                padding: 5px 6px;
+                margin: 6px 1px;
+                border: 2px solid blue;
+                color: white;
+                background: blue;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .btn1 {
+                padding: 5px 6px;
+                margin: 6px 1px;
+                border: 2px solid white;
+                color: black;
+                background: white;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .imgFluid {
+                height: 100px;
+                width: 100px;
+                border-radius: 150px;
+            }
+
+            .secRight {
+                display: flex;
+                height: 300px;
+                align-items: center;
+                justify-content: space-evenly;
+                max-width: 80%;
+                margin: auto;
+                /* font-family: 'Ubuntu', sans-serif; */
+            }
+
+            #aboutnews {
+                background-color: #f2f2f2;
+                height: 7136px;
+            }
+
+            #aboutnews div.parasnews {
+                display: inline-block;
+                position: relative;
+                top: 3473px;
+                padding: 0px 65px;
+            }
+
+            #contact .label {
+                display: inline;
+                position: relative;
+                left: 157px;
+            }
+
+            #contact .text {
+                display: inline;
+                position: relative;
+                left: 157px;
+                width: 178px;
+                height: 12px;
+                border-radius: 9px;
+                border: 2px solid white;
+                background-color: wheat;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="/static/img/logo.jpg" alt="" srcset=""><span style="font-size: 18px; color: blue;display: inline;position: relative;top: -14px;">Einspector</span>
+            <img src="/static/img/logo.jpg" alt="" srcset=""><span
+                style="font-size: 18px; color: blue;display: inline;position: relative;top: -14px;">Einspector</span>
         </div>
         <ul class="nav-list">
             <li><a href="#home" class="active">Home</a></li>
