@@ -12,6 +12,11 @@
             padding: 0;
         }
 
+        /* .response{
+            display: inline-block;
+            position: relative;
+        } */
+
         .navbar {
             display: flex;
             align-items: center;
@@ -366,6 +371,12 @@
                 background-color: wheat;
                 padding: 10px 20px;
             }
+
+            #contact .btn-label {
+                display: inline;
+                position: relative;
+                left: 150px;
+            }
         }
     </style>
 </head>
@@ -449,7 +460,7 @@
             <input type="text" name="phoneno" id="" class="text"><br><br>
             <label for="Report" class="label">Report:</label><br><br>
             <textarea name="Report" class="text" id="" cols="30" rows="40"></textarea><br><br>
-            <button type="submit" class="btn btn-label">Submit</button>
+            <button type="submit" class="btn btn-label response">Submit</button>
         </form>
     </section>
 </body>
