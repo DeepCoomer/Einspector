@@ -377,18 +377,66 @@
                 position: relative;
                 left: 150px;
             }
+
+            .links {
+                display: none;
+            }
+
+
+            .heading a:nth-child(2) {
+                color: green;
+                text-decoration: none;
+                font-size: 20px;
+                display: block;
+                padding: 7px;
+                margin-left: 150px;
+            }
+
+            .heading a i {
+                color: green;
+                padding: 10px;
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .heading a i:hover {
+                background-color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            .links {
+                background-color: rgb(190, 196, 190);
+            }
+
+            .links a {
+                color: green;
+                padding: 5px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid white;
+            }
+
+            .links a:hover {
+                background-color: green;
+                color: white;
+            }
         }
     </style>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="logo">
+        <div class="logo heading">
             <img src="/static/img/logo.jpg" alt="" srcset="">
+
             <!-- <span
                 style="font-size: 18px; color: blue;display: inline;position: relative;top: -14px;" class="ei">Einspector</span> -->
         </div>
-        <ul class="nav-list">
+        <ul class="nav-list links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#aboutnews">News</a></li>
             <li><a href="#about">About</a></li>
@@ -463,6 +511,18 @@
             <button type="submit" class="btn btn-label response">Submit</button>
         </form>
     </section>
+    <script>
+        function gfgMenu() {
+            const GFG = document.querySelector('.links');
+
+            if (GFG.style.display === "none") {
+                GFG.style.display = "block";
+            }
+            else {
+                GFG.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
