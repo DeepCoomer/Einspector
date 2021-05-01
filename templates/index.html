@@ -393,18 +393,18 @@
             }
 
             .heading a i {
-                color: green;
+                color: blue;
                 padding: 10px;
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
+                display: inline;
+                position: relative;
+                left: 120px;
+                top: 0
             }
 
-            .heading a i:hover {
+            /* .heading a i:hover {
                 background-color: rgb(0, 0, 0);
                 color: rgb(255, 255, 255);
-            }
+            } */
 
             .links {
                 background-color: rgb(190, 196, 190);
@@ -420,10 +420,10 @@
                 border-bottom: 1px solid white;
             }
 
-            .links a:hover {
+            /* .links a:hover {
                 background-color: green;
                 color: white;
-            }
+            } */
         }
     </style>
 </head>
@@ -433,7 +433,7 @@
         <div class="logo heading">
             <img src="/static/img/logo.jpg" alt="" srcset="">
             <a href="#hamburger-icon" onclick="gfgMenu()">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars" style="color: blue;"></i>
             </a>
             <!-- <span
                 style="font-size: 18px; color: blue;display: inline;position: relative;top: -14px;" class="ei">Einspector</span> -->
